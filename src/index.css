@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Gen Jyuu Gothic';
   src: local('Gen Jyuu Gothic'),
-    url('./assest/fonts/GenJyuuGothic-Normal.ttf') format('truetype');
+    url('./assest/fonts/GenJyuuGothic-Regular.ttf') format('truetype');
 }
 
 * {
@@ -10,10 +10,18 @@
   box-sizing: border-box;
 }
 body {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #aaaaaa22;
   font-family: 'Gen Jyuu Gothic', sans-serif;
   font-weight: 400;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 a {
   text-decoration: none;
   color: black;
