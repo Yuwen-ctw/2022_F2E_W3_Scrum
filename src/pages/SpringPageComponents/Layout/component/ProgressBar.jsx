@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { arrive, unarrive, complete, past, coming } from '../../assest/images'
+import {
+  arrive,
+  unarrive,
+  complete,
+  past,
+  coming,
+} from '../../../../assest/images'
 
 const StyledProgressBarContainer = styled.div`
   width: 100%;

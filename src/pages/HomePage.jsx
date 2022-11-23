@@ -34,7 +34,7 @@ const StyledStartButton = styled.div`
   font-size: 60px;
   font-weight: 700;
   line-height: 90px;
-  color: #ffffff;
+  color: var(--NeutralLight);
 `
 const StyledArrow = styled.img``
 
@@ -76,7 +76,7 @@ const StyledAcceptButton = styled.div`
   right: 30px;
   width: 208px;
   height: 74px;
-  background: #70d6df;
+  background: var(--PrimaryLight);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   text-align: center;

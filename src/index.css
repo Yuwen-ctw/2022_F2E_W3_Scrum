@@ -3,7 +3,11 @@
   src: local('Gen Jyuu Gothic'),
     url('./assest/fonts/GenJyuuGothic-Regular.ttf') format('truetype');
 }
-
+:root {
+  --PrimaryDark: #2c8492;
+  --PrimaryLight: #70d6df;
+  --NeutralLight: #ffffff;
+}
 * {
   margin: 0;
   padding: 0;

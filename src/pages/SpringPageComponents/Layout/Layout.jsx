@@ -1,17 +1,18 @@
-import { Outlet } from 'react-router-dom'
 import { useState } from 'react'
 import { ButtonBackward, ButtonForward } from './component/Button'
 import ProgressBar from './component/ProgressBar'
 import styled from 'styled-components'
-import { introBG } from '../assest/images'
+import { introBG } from '../../../assest/images'
 
 const StyledMain = styled.main`
   position: relative;
   width: 100%;
   height: 100vh;
+  max-height: 1024px;
   padding: 0 60px;
   background-image: url('${introBG}');
-  background-position: bottom;
+  background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
   // content layout
   display: flex;
@@ -20,6 +21,8 @@ const StyledMain = styled.main`
 `
 const StyledContent = styled.section`
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 `
 
 const StyledStepController = styled.div`
@@ -29,20 +32,18 @@ const StyledStepController = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-function Layout() {
-  const [isComplete, setIscomplete] = useState(false)
+function Layout({ step, onClickNext, onClickBack, children }) {
+  const [isComplete, setIscomplete] = useState(true)
   function handleAchieveState() {
     setIscomplete(true)
   }
   return (
     <StyledMain>
-      <ProgressBar step={1} />
-      <StyledContent>
-        <Outlet onDragEnd={handleAchieveState} />
-      </StyledContent>
+      <ProgressBar step={step} />
+      <StyledContent>{children}</StyledContent>
       <StyledStepController>
-        <ButtonBackward />
-        <ButtonForward enable={isComplete} />
+        <ButtonBackward step={step} onClickBack={onClickBack} />
+        <ButtonForward enable={isComplete} onClickNext={onClickNext} />
       </StyledStepController>
     </StyledMain>
   )

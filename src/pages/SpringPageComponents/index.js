@@ -1,6 +1,13 @@
-import TodosPage from './TodosPage'
-import PlaningPage from './PlaningPage'
-import FlowPage from './FlowPage'
-import ConfluencePage from './ConfluencePage'
+import TodosSection from './TodosSection'
+import PlaningSection from './PlaningSection'
+import FlowSection from './FlowSection'
+import ConfluenceSection from './ConfluenceSection'
+import IntroduceSection from './IntroduceSection'
 
-export { TodosPage, PlaningPage, FlowPage, ConfluencePage }
+export {
+  TodosSection,
+  PlaningSection,
+  FlowSection,
+  ConfluenceSection,
+  IntroduceSection,
+}

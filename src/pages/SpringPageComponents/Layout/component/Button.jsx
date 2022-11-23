@@ -9,18 +9,22 @@ const StyledContainer = styled.div`
   font-weight: 700;
   font-size: 28px;
   &:hover {
-    scale: ${props => (props.enable ? '1.07' : '1')};
+    scale: ${({ enable }) => (enable ? '1.07' : '1')};
+  }
+  // 針對退回鍵, 若step > 1 才顯示
+  &:nth-child(1) {
+    visibility: ${({ step }) => (step > 1 ? 'visible' : 'hidden')};
   }
 `
 const StyledText = styled.p`
   color: ${props => props.color};
 `
 
-function ButtonBackward() {
+function ButtonBackward({ step, onClickBack }) {
   const color = '#ffffff'
   return (
     <>
-      <StyledContainer enable>
+      <StyledContainer enable onClick={onClickBack} step={step}>
         <ArrowBackward color={color} />
         <StyledText color={color}>回上一座島</StyledText>
       </StyledContainer>
@@ -28,12 +32,12 @@ function ButtonBackward() {
   )
 }
 
-function ButtonForward({ enable }) {
+function ButtonForward({ onClickNext, enable }) {
   const color = enable ? '#ffffff' : '#8D8A91'
 
   return (
     <>
-      <StyledContainer enable={enable}>
+      <StyledContainer enable={enable} onClick={onClickNext}>
         <StyledText color={color}>前往下一座島</StyledText>
         <ArrowForward color={color} />
       </StyledContainer>
