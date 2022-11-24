@@ -20,6 +20,7 @@ const StyledMain = styled.main`
   justify-content: space-between;
 `
 const StyledContent = styled.section`
+  position: relative;
   flex-grow: 1;
   display: flex;
   flex-direction: column;

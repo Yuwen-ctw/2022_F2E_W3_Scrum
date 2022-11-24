@@ -19,12 +19,12 @@ function SpringPage() {
 
   return (
     <Layout
-      step={step}
+      step={2}
       onClickNext={handleForwardButtonClick}
       onClickBack={handleBackwardButtonClick}
     >
-      <IntroduceSection />
-      {false && <TodosSection />}
+      {false && <IntroduceSection />}
+      <TodosSection />
       {false && <PlaningSection />}
       {false && <FlowSection />}
       {false && <ConfluenceSection />}

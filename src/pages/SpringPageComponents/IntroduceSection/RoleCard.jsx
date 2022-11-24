@@ -1,19 +1,5 @@
+import { developer, productOwner, scrumMaster } from '../../../assest/images'
 import styled from 'styled-components'
-import { developer, productOwner, scrumMaster } from '../../assest/images'
-const StyledTitle = styled.h1`
-  margin-top: 36px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 90px;
-  color: #ffffff;
-`
-const StyledRoleContainer = styled.div`
-  margin-top: 24px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-`
 const StyledRoleCard = styled.div`
   padding: 36px 48px;
   display: grid;
@@ -52,20 +38,6 @@ const StyledRoleCard = styled.div`
   }
 `
 
-function IntroduceSection() {
-  return (
-    <>
-      <StyledTitle>角色介紹</StyledTitle>
-      <StyledRoleContainer>
-        <RoleCard role={'productOwner'} />
-        <RoleCard role={'scrumMaster'} />
-        <RoleCard role={'developer'} />
-      </StyledRoleContainer>
-    </>
-  )
-}
-export default IntroduceSection
-
 function RoleCard({ role }) {
   let src
   let title
@@ -102,3 +74,4 @@ function RoleCard({ role }) {
     </StyledRoleCard>
   )
 }
+export default RoleCard
