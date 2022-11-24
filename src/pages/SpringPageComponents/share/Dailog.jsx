@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const StyledDialog = styled.div`
+const Dialog = styled.div`
   padding: 24px 36px;
   background: #ffffff;
   border: 5px solid #373a3b;
@@ -14,13 +14,5 @@ const StyledDialog = styled.div`
     color: #000000;
   }
 `
-
-function Dialog({ children, width }) {
-  return (
-    <>
-      <StyledDialog width={width}>{children}</StyledDialog>
-    </>
-  )
-}
 
 export default Dialog

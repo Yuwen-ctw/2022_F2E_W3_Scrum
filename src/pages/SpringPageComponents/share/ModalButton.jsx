@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const ModalButton = styled.div`
   width: 208px;
   height: 74px;
-  background: var(--SecondLight);
+  background: var(--SecondLightT);
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   text-align: center;

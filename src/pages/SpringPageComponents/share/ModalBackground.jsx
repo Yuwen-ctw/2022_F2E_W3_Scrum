@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const ModalBackground = styled.div`
   position: fixed;
+  z-index: 999;
   top: 0px;
   left: 0px;
   width: 100vw;

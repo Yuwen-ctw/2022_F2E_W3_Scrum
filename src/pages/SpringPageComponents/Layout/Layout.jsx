@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { ButtonBackward, ButtonForward } from './component/Button'
 import ProgressBar from './component/ProgressBar'
 import styled from 'styled-components'
@@ -11,6 +10,7 @@ const StyledMain = styled.main`
   max-height: 1024px;
   padding: 0 60px;
   background-image: url('${introBG}');
+  background: ${({ step }) => step > 1 && 'var(--PrimaryLight)'};
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -27,24 +27,24 @@ const StyledContent = styled.section`
 `
 
 const StyledStepController = styled.div`
-  width: 100%;
+  position: relative;
+  left: -60px;
+  width: calc(100% + 120px);
+  padding: 0 60px;
   height: 108px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: ${({ step }) => (step > 1 ? 'var(--SecondDarkL)' : '')};
 `
-function Layout({ step, onClickNext, onClickBack, children }) {
-  const [isComplete, setIscomplete] = useState(true)
-  function handleAchieveState() {
-    setIscomplete(true)
-  }
+function Layout({ step, onClickNext, onClickBack, enable, children }) {
   return (
-    <StyledMain>
+    <StyledMain step={step}>
       <ProgressBar step={step} />
       <StyledContent>{children}</StyledContent>
-      <StyledStepController>
+      <StyledStepController step={step}>
         <ButtonBackward step={step} onClickBack={onClickBack} />
-        <ButtonForward enable={isComplete} onClickNext={onClickNext} />
+        <ButtonForward enable={enable} onClickNext={onClickNext} />
       </StyledStepController>
     </StyledMain>
   )

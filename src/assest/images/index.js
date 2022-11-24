@@ -17,6 +17,11 @@ import productOwner from './springpage/productOwner.png'
 import productOwnerAvatar from './springpage/productOwnerAvatar.png'
 import scrumMaster from './springpage/scrumMaster.png'
 import scrumMasterAvatar from './springpage/scrumMasterAvater.png'
+// todos
+import stonewall from './springpage/todos__stonewall.png'
+import beach from './springpage/todos_bg.png'
+import jira from './springpage/todos_Jira.png'
+
 export {
   homepageBG,
   homepageBG1,
@@ -35,4 +40,7 @@ export {
   productOwnerAvatar,
   scrumMaster,
   scrumMasterAvatar,
+  stonewall,
+  beach,
+  jira,
 }

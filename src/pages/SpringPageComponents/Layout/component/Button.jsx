@@ -34,10 +34,10 @@ function ButtonBackward({ step, onClickBack }) {
 
 function ButtonForward({ onClickNext, enable }) {
   const color = enable ? '#ffffff' : '#8D8A91'
-
+  const handler = enable ? onClickNext : () => {}
   return (
     <>
-      <StyledContainer enable={enable} onClick={onClickNext}>
+      <StyledContainer enable={enable} onClick={handler}>
         <StyledText color={color}>前往下一座島</StyledText>
         <ArrowForward color={color} />
       </StyledContainer>
