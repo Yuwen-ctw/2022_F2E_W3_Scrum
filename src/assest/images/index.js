@@ -25,7 +25,14 @@ import jira from './springpage/todos_Jira.png'
 import planing_bg from './springpage/planing_bg.png'
 import whiteBox from './springpage/plan_whitebox.png'
 import redBox from './springpage/plan_redbox.png'
-
+// flow
+import flow_bg from './springpage/flow_bg.png'
+// flowexam
+import flowexam_bg from './springpage/flowexam_bg.png'
+// retro
+import retro_bg from './springpage/retro_bg.png'
+// end page
+import endpage_bg from './endpage/endpageBG.png'
 export {
   homepageBG,
   homepageBG1,
@@ -50,4 +57,8 @@ export {
   planing_bg,
   whiteBox,
   redBox,
+  flow_bg,
+  flowexam_bg,
+  retro_bg,
+  endpage_bg,
 }

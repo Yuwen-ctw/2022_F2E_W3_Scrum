@@ -1,13 +1,13 @@
+import IntroduceSection from './IntroduceSection/IntroduceSection'
 import TodosSection from './TodosSection/TodosSection'
 import PlaningSection from './PlaningSection/PlaningSection'
-import FlowSection from './FlowSection'
-import ConfluenceSection from './ConfluenceSection'
-import IntroduceSection from './IntroduceSection/IntroduceSection'
+import FlowSection from './FlowSection/FlowSection'
+import RetroSection from './RetroSection'
 
 export {
+  IntroduceSection,
   TodosSection,
   PlaningSection,
   FlowSection,
-  ConfluenceSection,
-  IntroduceSection,
+  RetroSection,
 }
