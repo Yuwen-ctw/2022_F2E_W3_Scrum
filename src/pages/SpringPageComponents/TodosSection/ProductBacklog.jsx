@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 import { stonewall } from '../../../assest/images'
+import DropContainer from '../share/DropContainer'
+import Dropbox from '../share/Dropbox'
+import DropContainerTitle from '../share/DropContainTitle'
 
 const StyledContainer = styled.div`
   margin-top: 12px;
@@ -12,23 +15,14 @@ const StyledContainer = styled.div`
   background-repeat: no-repeat;
 `
 
-const StyledTitle = styled.h3`
+const StyledTitle = styled(DropContainerTitle)`
   margin-top: 12px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 72px;
   color: #524d5b;
-  span {
-    font-size: 32px;
-  }
 `
 
-const StyledItemContainer = styled.ul`
+const StyledDropContainer = styled(DropContainer)`
   position: relative;
   margin-top: 65px;
-  display: flex;
-  flex-direction: column;
   gap: 36px;
   align-items: center;
 
@@ -86,13 +80,11 @@ const StyledLine = styled.div`
   }
 `
 
-const StyledItem = styled.li`
+const StyledDropbox = styled(Dropbox)`
   width: 520px;
   height: 84px;
-  border: 3px dashed #ffffff;
-  border-radius: 12px;
 `
-// const StyledItem = styled.li`
+// const StyledDropbox = styled.li`
 //   max-width: 520px;
 //   padding: 24px 36px;
 //   border-radius: 12px;
@@ -120,13 +112,13 @@ function ProductBacklog() {
       <StyledTitle>
         產品待辦清單<span>Product Backlog</span>
       </StyledTitle>
-      <StyledItemContainer>
+      <StyledDropContainer>
         <StyledLine />
-        <StyledItem></StyledItem>
-        <StyledItem></StyledItem>
-        <StyledItem></StyledItem>
-        <StyledItem></StyledItem>
-      </StyledItemContainer>
+        <StyledDropbox></StyledDropbox>
+        <StyledDropbox></StyledDropbox>
+        <StyledDropbox></StyledDropbox>
+        <StyledDropbox></StyledDropbox>
+      </StyledDropContainer>
     </StyledContainer>
   )
 }

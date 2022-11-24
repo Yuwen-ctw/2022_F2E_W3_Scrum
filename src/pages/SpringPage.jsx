@@ -27,11 +27,11 @@ function SpringPage() {
       step={step}
       onClickNext={handleForwardButtonClick}
       onClickBack={handleBackwardButtonClick}
-      enable={step === 2 ? false : true}
+      enable={true}
     >
       {step === 1 && <IntroduceSection />}
       {step === 2 && <TodosSection onAchieve={handleAchieveState} />}
-      {false && <PlaningSection />}
+      {step === 3 && <PlaningSection />}
       {false && <FlowSection />}
       {false && <ConfluenceSection />}
     </Layout>

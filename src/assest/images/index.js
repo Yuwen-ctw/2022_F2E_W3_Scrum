@@ -19,8 +19,12 @@ import scrumMaster from './springpage/scrumMaster.png'
 import scrumMasterAvatar from './springpage/scrumMasterAvater.png'
 // todos
 import stonewall from './springpage/todos__stonewall.png'
-import beach from './springpage/todos_bg.png'
+import todos_bg from './springpage/todos_bg.png'
 import jira from './springpage/todos_Jira.png'
+// planing
+import planing_bg from './springpage/planing_bg.png'
+import whiteBox from './springpage/plan_whitebox.png'
+import redBox from './springpage/plan_redbox.png'
 
 export {
   homepageBG,
@@ -41,6 +45,9 @@ export {
   scrumMaster,
   scrumMasterAvatar,
   stonewall,
-  beach,
+  todos_bg,
   jira,
+  planing_bg,
+  whiteBox,
+  redBox,
 }

@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import TaskIntro from './TaskIntro'
 import ProductBacklog from './ProductBacklog'
 import Todos from './Todos'
-import { beach } from '../../../assest/images'
+import { todos_bg } from '../../../assest/images'
 
-const StyledBeachBG = styled.img`
+const StyledBG = styled.img`
   position: absolute;
   width: calc(100% + 120px);
   left: -60px;
@@ -27,7 +27,7 @@ function TodosSection() {
         <Todos />
         <ProductBacklog />
       </StyledContainer>
-      <StyledBeachBG src={beach} alt="beach" />
+      <StyledBG src={todos_bg} alt="beach" />
     </>
   )
 }

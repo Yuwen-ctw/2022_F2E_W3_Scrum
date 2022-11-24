@@ -1,5 +1,5 @@
 import TodosSection from './TodosSection/TodosSection'
-import PlaningSection from './PlaningSection'
+import PlaningSection from './PlaningSection/PlaningSection'
 import FlowSection from './FlowSection'
 import ConfluenceSection from './ConfluenceSection'
 import IntroduceSection from './IntroduceSection/IntroduceSection'
