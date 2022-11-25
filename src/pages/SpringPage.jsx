@@ -28,19 +28,18 @@ function SpringPage() {
   function handleChangeAchieveState(boolean) {
     setIscomplete(boolean)
   }
-
   return (
     <Layout
       step={step}
       onClickNext={handleForwardButtonClick}
       onClickBack={handleBackwardButtonClick}
-      enable={true}
+      enable={isComplete}
     >
       {step === 1 && <IntroduceSection />}
       {step === 2 && <TodosSection onAchieve={handleChangeAchieveState} />}
-      {step === 3 && <PlaningSection />}
+      {step === 3 && <PlaningSection onAchieve={handleChangeAchieveState} />}
       {step === 4 && <FlowSection />}
-      {step === 5 && <FlowexamSection />}
+      {step === 5 && <FlowexamSection onAchieve={handleChangeAchieveState} />}
       {step === 6 && <RetroSection onAchieve={handleChangeAchieveState} />}
     </Layout>
   )

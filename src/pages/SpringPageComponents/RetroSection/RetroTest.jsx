@@ -61,7 +61,6 @@ const StyledLabel = styled.label`
 function RetroTest({ onChange }) {
   const goodPointRef = useRef(null)
   const reviewPointRef = useRef(null)
-
   function checkAnswer() {
     if (
       goodPointRef.current.checked === true &&

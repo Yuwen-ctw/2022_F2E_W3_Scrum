@@ -39,14 +39,19 @@ const StyledSpring = styled.h1`
   color: #ffffff;
 `
 // TODO achieve
-function FlowexamSection() {
+function FlowexamSection({ onAchieve }) {
   const [isWrong, setIsWrong] = useState(false)
+  function handelDropDown() {
+    // fake
+    setIsWrong(true)
+    onAchieve(true)
+  }
   return (
     <>
       <StyledContainer>
         <ExamIntro isWrong={isWrong} />
         <ExamHint />
-        <Dropboxes />
+        <Dropboxes onDrop={handelDropDown} />
         <DragItems />
       </StyledContainer>
       <StyledSpring>Sprint</StyledSpring>

@@ -28,7 +28,6 @@ function RetroSection({ onAchieve }) {
   const [isCorrect, setIsCorrect] = useState(false)
   // disable the forward button first
   useEffect(() => onAchieve(false), [])
-
   function handleChangeInput(boolean) {
     setIsCorrect(boolean)
     boolean && onAchieve(true)
