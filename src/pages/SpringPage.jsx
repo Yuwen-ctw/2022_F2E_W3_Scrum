@@ -4,24 +4,29 @@ import {
   PlaningSection,
   FlowSection,
   FlowexamSection,
-  ConfluenceSection,
+  RetroSection,
 } from './SpringPageComponents/index'
 import Layout from './SpringPageComponents/Layout/Layout'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // TODO achieve state
 function SpringPage() {
   const [step, setStep] = useState(1)
   const [isComplete, setIscomplete] = useState(true)
+  const navigate = useNavigate()
 
   function handleForwardButtonClick() {
+    if (step === 6) {
+      navigate('/end')
+    }
     setStep(step + 1)
   }
   function handleBackwardButtonClick() {
     setStep(step - 1)
   }
-  function handleAchieveState() {
-    setIscomplete(true)
+  function handleChangeAchieveState(boolean) {
+    setIscomplete(boolean)
   }
 
   return (
@@ -32,11 +37,11 @@ function SpringPage() {
       enable={true}
     >
       {step === 1 && <IntroduceSection />}
-      {step === 2 && <TodosSection onAchieve={handleAchieveState} />}
+      {step === 2 && <TodosSection onAchieve={handleChangeAchieveState} />}
       {step === 3 && <PlaningSection />}
       {step === 4 && <FlowSection />}
       {step === 5 && <FlowexamSection />}
-      {false && <ConfluenceSection />}
+      {step === 6 && <RetroSection onAchieve={handleChangeAchieveState} />}
     </Layout>
   )
 }

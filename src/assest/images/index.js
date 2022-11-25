@@ -35,6 +35,7 @@ import flowexam_mainArrowBg from './springpage/flowexam_mainarrow.png'
 import flowexam_subArrowBg from './springpage/flowexam_subarrow.png'
 // retro
 import retro_bg from './springpage/retro_bg.png'
+import retro_check from './springpage/retro_check.png'
 // end page
 import endpage_bg from './endpage/endpageBG.png'
 export {
@@ -68,5 +69,6 @@ export {
   flowexam_mainArrowBg,
   flowexam_subArrowBg,
   retro_bg,
+  retro_check,
   endpage_bg,
 }
