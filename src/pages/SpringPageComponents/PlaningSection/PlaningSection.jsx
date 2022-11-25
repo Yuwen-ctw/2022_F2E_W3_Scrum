@@ -33,7 +33,7 @@ function PlaningSection() {
         <ProductBacklog />
         <SpringBacklog />
       </StyledContainer>
-      <StyledBG src={planing_bg} alt="beach" />
+      <StyledBG src={planing_bg} alt="background" />
       <PlaningModal />
     </>
   )

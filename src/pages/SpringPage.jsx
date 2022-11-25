@@ -8,6 +8,7 @@ import {
 import Layout from './SpringPageComponents/Layout/Layout'
 import { useState } from 'react'
 
+// TODO achieve state
 function SpringPage() {
   const [step, setStep] = useState(1)
   const [isComplete, setIscomplete] = useState(true)
@@ -32,7 +33,7 @@ function SpringPage() {
       {step === 1 && <IntroduceSection />}
       {step === 2 && <TodosSection onAchieve={handleAchieveState} />}
       {step === 3 && <PlaningSection />}
-      {false && <FlowSection />}
+      {step === 4 && <FlowSection />}
       {false && <ConfluenceSection />}
     </Layout>
   )

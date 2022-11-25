@@ -27,6 +27,8 @@ import whiteBox from './springpage/plan_whitebox.png'
 import redBox from './springpage/plan_redbox.png'
 // flow
 import flow_bg from './springpage/flow_bg.png'
+import flow_firebg from './springpage/flow_firebg.png'
+import flow_tool from './springpage/flow_tool.png'
 // flowexam
 import flowexam_bg from './springpage/flowexam_bg.png'
 // retro
@@ -58,6 +60,8 @@ export {
   whiteBox,
   redBox,
   flow_bg,
+  flow_firebg,
+  flow_tool,
   flowexam_bg,
   retro_bg,
   endpage_bg,
