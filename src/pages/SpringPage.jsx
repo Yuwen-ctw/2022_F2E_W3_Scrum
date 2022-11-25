@@ -3,6 +3,7 @@ import {
   TodosSection,
   PlaningSection,
   FlowSection,
+  FlowexamSection,
   ConfluenceSection,
 } from './SpringPageComponents/index'
 import Layout from './SpringPageComponents/Layout/Layout'
@@ -34,6 +35,7 @@ function SpringPage() {
       {step === 2 && <TodosSection onAchieve={handleAchieveState} />}
       {step === 3 && <PlaningSection />}
       {step === 4 && <FlowSection />}
+      {step === 5 && <FlowexamSection />}
       {false && <ConfluenceSection />}
     </Layout>
   )

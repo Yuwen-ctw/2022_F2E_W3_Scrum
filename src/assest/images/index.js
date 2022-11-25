@@ -31,6 +31,8 @@ import flow_firebg from './springpage/flow_firebg.png'
 import flow_tool from './springpage/flow_tool.png'
 // flowexam
 import flowexam_bg from './springpage/flowexam_bg.png'
+import flowexam_mainArrowBg from './springpage/flowexam_mainarrow.png'
+import flowexam_subArrowBg from './springpage/flowexam_subarrow.png'
 // retro
 import retro_bg from './springpage/retro_bg.png'
 // end page
@@ -63,6 +65,8 @@ export {
   flow_firebg,
   flow_tool,
   flowexam_bg,
+  flowexam_mainArrowBg,
+  flowexam_subArrowBg,
   retro_bg,
   endpage_bg,
 }
