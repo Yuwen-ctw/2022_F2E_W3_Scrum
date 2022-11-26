@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Droppable, Draggable } from 'react-beautiful-dnd'
 import DropContainerTitle from '../share/DropContainTitle'
 import DropContainer from '../share/DropContainer'
 import DragItem from '../share/DragItem'
@@ -13,6 +14,8 @@ const StyledTitle = styled(DropContainerTitle)`
 const StyledDropContainer = styled(DropContainer)`
   margin-top: 96px;
   gap: 32px;
+  height: 550px;
+  width: 534px;
 `
 
 const StyledBox = styled.div`
@@ -34,41 +37,60 @@ const StyledDragItem = styled(DragItem)`
   background: rgba(128, 199, 79, 0.85);
   color: #ffffff;
 `
-function ProductBacklog() {
+function ProductBacklog({ dragItems }) {
+  function getDraggingStyle(style, isDragging) {
+    const draggingStyle = isDragging
+      ? {
+          scale: '0.6',
+          opacity: '0.75',
+          outline: '3px solid #473438',
+        }
+      : {}
+    return { ...style, ...draggingStyle }
+  }
+
   return (
     <StyledContainer>
       <StyledTitle>
         產品待辦清單<span>Product Backlog</span>
       </StyledTitle>
-      <StyledDropContainer>
-        <StyledDragItem_Modify score={5}>
-          後台職缺管理功能
-          <br />
-          <span>(資訊上架、下架、顯示應徵者資料)</span>
-        </StyledDragItem_Modify>
-        <StyledDragItem_Modify score={5}>
-          前台職缺列表
-          <br />
-          <span>(缺詳細內容、點選可發送應徵意願)</span>
-        </StyledDragItem_Modify>
-        <StyledDragItem_Modify score={8}>
-          會員系統(登入、註冊、管理)
-        </StyledDragItem_Modify>
-        <StyledDragItem_Modify score={13}>
-          應徵者的線上履歷編輯器
-        </StyledDragItem_Modify>
-      </StyledDropContainer>
+      <Droppable droppableId="productBacklog">
+        {provided => (
+          <StyledDropContainer
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            {dragItems.map((item, index) => (
+              <Draggable
+                draggableId={`productBacklogItem-${index}`}
+                index={index}
+                key={index}
+              >
+                {(provided, snapshot) => {
+                  return (
+                    <StyledDragItem
+                      {...provided.dragHandleProps}
+                      {...provided.draggableProps}
+                      ref={provided.innerRef}
+                      style={getDraggingStyle(
+                        provided.draggableProps.style,
+                        snapshot.isDragging
+                      )}
+                      score={item.score}
+                    >
+                      <div style={{ width: 'fit-content' }}>{item.item}</div>
+                      <StyledBox>x{item.score}</StyledBox>
+                    </StyledDragItem>
+                  )
+                }}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </StyledDropContainer>
+        )}
+      </Droppable>
     </StyledContainer>
   )
 }
 
 export default ProductBacklog
-
-function StyledDragItem_Modify({ score, children }) {
-  return (
-    <StyledDragItem>
-      <div style={{ width: 'fit-content' }}>{children}</div>
-      <StyledBox>x{score}</StyledBox>
-    </StyledDragItem>
-  )
-}

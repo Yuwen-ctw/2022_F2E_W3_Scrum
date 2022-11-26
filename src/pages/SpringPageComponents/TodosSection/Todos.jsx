@@ -22,7 +22,6 @@ function Todos({ dragItems }) {
     const draggingStyle = isDragging
       ? {
           scale: '0.6',
-          margin: '0 104px',
           opacity: '0.75',
           outline: '3px solid #473438',
         }
