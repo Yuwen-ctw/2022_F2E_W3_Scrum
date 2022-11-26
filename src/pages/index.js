@@ -1,4 +1,4 @@
-import HomePage from './HomePage'
-import SpringPage from './SpringPage'
-import EndPage from './EndPage'
+import HomePage from './HomePage/HomePage'
+import SpringPage from './SpringPage/SpringPage'
+import EndPage from './EndPage/EndPage'
 export { HomePage, SpringPage, EndPage }
