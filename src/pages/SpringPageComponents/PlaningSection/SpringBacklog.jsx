@@ -83,7 +83,6 @@ function generateBox(score) {
   ))
 }
 
-// TODO add calculate score function
 function SpringBacklog({ dragItems, score }) {
   const showBlank = dragItems.length === 0 ? true : false
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { useState } from 'react'
+import { DragDropContext } from 'react-beautiful-dnd'
+import { useState, useEffect } from 'react'
 import ExamIntro from './ExamIntro'
 import ExamHint from './ExamHint'
 import DragItems from './DragItems'
@@ -38,21 +39,59 @@ const StyledSpring = styled.h1`
   line-height: 90px;
   color: #ffffff;
 `
-// TODO achieve
+
 function FlowexamSection({ onAchieve }) {
   const [isWrong, setIsWrong] = useState(false)
-  function handelDropDown() {
-    // fake
-    setIsWrong(true)
-    onAchieve(true)
+  const [items, setItems] = useState({
+    exam_init: [
+      { name: '每日站立會議', en_name: 'Daily Scrum', priority: 0 },
+      { name: '短衝檢視會議', en_name: 'Spring Review', priority: 1 },
+      { name: '短衝自省會議', en_name: 'Spring Retrospective', priority: 2 },
+    ],
+    exam_goal: [],
+  })
+  // disable the forward button first
+  useEffect(() => onAchieve(false), [])
+
+  function validAnswer(items) {
+    // check achieve state
+    return (
+      // if all item was moved out
+      items.exam_init.length === 0 &&
+      // if priority is ascending
+      items.exam_goal.every((item, index) => {
+        return item.priority === index
+      })
+    )
+  }
+
+  function handleDragEnd(e) {
+    // get information
+    const { source, destination } = e
+    if (!destination) return
+    // copy array
+    const nextDrags = { ...items }
+    // remove the drag item from source
+    const [moveItem] = nextDrags[source.droppableId].splice(source.index, 1)
+    // add the drag item to destination
+    nextDrags[destination.droppableId].splice(destination.index, 0, moveItem)
+    // update state
+    setItems(nextDrags)
+
+    const result = validAnswer(nextDrags)
+    if (result) onAchieve(true)
+    else onAchieve(false)
+    setIsWrong(!result)
   }
   return (
     <>
       <StyledContainer>
         <ExamIntro isWrong={isWrong} />
         <ExamHint />
-        <Dropboxes onDrop={handelDropDown} />
-        <DragItems />
+        <DragDropContext onDragEnd={handleDragEnd}>
+          <Dropboxes dragItems={items.exam_goal} />
+          <DragItems dragItems={items.exam_init} />
+        </DragDropContext>
       </StyledContainer>
       <StyledSpring>Sprint</StyledSpring>
       <StyledBG src={flowexam_bg} alt="background" />

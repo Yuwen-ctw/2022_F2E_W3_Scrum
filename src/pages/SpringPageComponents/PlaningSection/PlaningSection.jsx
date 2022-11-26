@@ -58,7 +58,7 @@ function PlaningSection({ onAchieve }) {
 
     // check achieve state
     const nextScore = items.springBacklog.reduce(
-      (accr, prev) => (accr += prev.score),
+      (accr, curr) => (accr += curr.score),
       0
     )
     // check if item >= 2 and score <= 20

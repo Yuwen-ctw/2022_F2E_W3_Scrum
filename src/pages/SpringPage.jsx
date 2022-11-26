@@ -10,9 +10,8 @@ import Layout from './SpringPageComponents/Layout/Layout'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-// TODO achieve state
 function SpringPage() {
-  const [step, setStep] = useState(3)
+  const [step, setStep] = useState(1)
   const [isComplete, setIscomplete] = useState(true)
   const navigate = useNavigate()
 
