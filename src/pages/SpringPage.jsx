@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 
 // TODO achieve state
 function SpringPage() {
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(2)
   const [isComplete, setIscomplete] = useState(true)
   const navigate = useNavigate()
 

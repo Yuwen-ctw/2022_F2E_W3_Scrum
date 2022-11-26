@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import DropContainer from '../share/DropContainer'
 import DragItem from '../share/DragItem'
-
+import { Droppable, Draggable } from 'react-beautiful-dnd'
 const StyledDropContainer = styled(DropContainer)`
   margin-top: 96px;
   display: flex;
@@ -17,24 +17,52 @@ const StyledDragItem = styled(DragItem)`
   }
 `
 
-// TODO create the dragging style
-
-function Todos() {
+function Todos({ dragItems }) {
+  function getDraggingStyle(style, isDragging) {
+    const draggingStyle = isDragging
+      ? {
+          scale: '0.6',
+          margin: '0 104px',
+          opacity: '0.75',
+          outline: '3px solid #473438',
+        }
+      : {}
+    return { ...style, ...draggingStyle }
+  }
   return (
-    <StyledDropContainer>
-      <StyledDragItem>會員系統（登入、註冊、管理）</StyledDragItem>
-      <StyledDragItem>應徵者的線上履歷編輯器</StyledDragItem>
-      <StyledDragItem>
-        前台職缺列表
-        <br />
-        <span>（缺詳細內容、點選可發送應徵意願）</span>
-      </StyledDragItem>
-      <StyledDragItem>
-        後台職缺管理功能
-        <br />
-        <span>（資訊上架、下架、顯示應徵者資料）</span>
-      </StyledDragItem>
-    </StyledDropContainer>
+    <Droppable droppableId="todos">
+      {provided => (
+        <StyledDropContainer
+          {...provided.droppableProps}
+          ref={provided.innerRef}
+        >
+          {dragItems.map((item, index) => (
+            <Draggable
+              draggableId={`todos-left-${index}`}
+              index={index}
+              key={index}
+            >
+              {(provided, snapshot) => {
+                return (
+                  <StyledDragItem
+                    {...provided.dragHandleProps}
+                    {...provided.draggableProps}
+                    ref={provided.innerRef}
+                    style={getDraggingStyle(
+                      provided.draggableProps.style,
+                      snapshot.isDragging
+                    )}
+                  >
+                    {item.item}
+                  </StyledDragItem>
+                )
+              }}
+            </Draggable>
+          ))}
+          {provided.placeholder}
+        </StyledDropContainer>
+      )}
+    </Droppable>
   )
 }
 

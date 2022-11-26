@@ -11,7 +11,7 @@ const DragItem = styled.li`
   text-align: center;
   color: var(--SecondDarkL);
   cursor: grab;
-
+  -webkit-user-select: none;
   span {
     font-size: 24px;
   }

@@ -1,17 +1,19 @@
 import styled from 'styled-components'
+import { Droppable, Draggable } from 'react-beautiful-dnd'
 import { stonewall } from '../../../assest/images'
 import DropContainer from '../share/DropContainer'
+import DragItem from '../share/DragItem'
 import Dropbox from '../share/Dropbox'
 import DropContainerTitle from '../share/DropContainTitle'
 
 const StyledContainer = styled.div`
+  position: relative;
   margin-top: 12px;
   margin-left: auto;
   width: 621px;
   height: 681px;
   background-image: url('${stonewall}');
   background-position: center;
-  // background-size: cover;
   background-repeat: no-repeat;
 `
 
@@ -21,9 +23,10 @@ const StyledTitle = styled(DropContainerTitle)`
 `
 
 const StyledDropContainer = styled(DropContainer)`
+  height: 444px;
   position: relative;
   margin-top: 65px;
-  gap: 36px;
+  gap: 20px;
   align-items: center;
 
   &::after,
@@ -79,46 +82,65 @@ const StyledLine = styled.div`
     rotate: 135deg;
   }
 `
-
-const StyledDropbox = styled(Dropbox)`
+const StyledBlankContainer = styled.div`
+  position: absolute;
+  display: ${({ showBlank }) => (showBlank ? 'grid' : 'none')};
+  width: 100%;
+  margin-top: 65px;
+  grid-template-columns: 1fr;
+  row-gap: 36px;
+`
+const StyledBlankbox = styled(Dropbox)`
   width: 520px;
   height: 84px;
+  justify-self: center;
 `
-// const StyledDropbox = styled.li`
-//   max-width: 520px;
-//   padding: 24px 36px;
-//   border-radius: 12px;
-//   background: rgba(255, 255, 255, 0.75);
-//   box-shadow: 9px 10px 0 0 rgba(71, 52, 56, 0.75);
-//   font-weight: 700;
-//   font-size: 32px;
-//   line-height: 36px;
-//   text-align: center;
-//   color: var(--SecondDarkL);
-//   cursor: grab;
 
-//   &:nth-child(even) {
-//     margin-left: 60px;
-//   }
+const StyledDragItem = styled(DragItem)`
+  width: 520px;
+`
 
-//   span {
-//     font-size: 24px;
-//   }
-// `
-
-function ProductBacklog() {
+function ProductBacklog({ dropboxs }) {
+  const showBlank = dropboxs.length === 0 ? true : false
   return (
     <StyledContainer>
       <StyledTitle>
         產品待辦清單<span>Product Backlog</span>
       </StyledTitle>
-      <StyledDropContainer>
-        <StyledLine />
-        <StyledDropbox></StyledDropbox>
-        <StyledDropbox></StyledDropbox>
-        <StyledDropbox></StyledDropbox>
-        <StyledDropbox></StyledDropbox>
-      </StyledDropContainer>
+      <StyledBlankContainer showBlank={showBlank}>
+        <StyledBlankbox />
+        <StyledBlankbox />
+        <StyledBlankbox />
+        <StyledBlankbox />
+      </StyledBlankContainer>
+      <Droppable droppableId="backlog">
+        {provided => (
+          <StyledDropContainer
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+          >
+            <StyledLine />
+            {dropboxs.map((item, index) => (
+              <Draggable
+                draggableId={`todos-right-${index}`}
+                index={index}
+                key={index}
+              >
+                {provided => (
+                  <StyledDragItem
+                    {...provided.dragHandleProps}
+                    {...provided.draggableProps}
+                    ref={provided.innerRef}
+                  >
+                    {item.item}
+                  </StyledDragItem>
+                )}
+              </Draggable>
+            ))}
+            {provided.placeholder}
+          </StyledDropContainer>
+        )}
+      </Droppable>
     </StyledContainer>
   )
 }

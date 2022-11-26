@@ -25,7 +25,7 @@ const StyledBG = styled.img`
 `
 
 function RetroSection({ onAchieve }) {
-  const [isCorrect, setIsCorrect] = useState(false)
+  const [isCorrect, setIsCorrect] = useState(true)
   // disable the forward button first
   useEffect(() => onAchieve(false), [])
   function handleChangeInput(boolean) {
