@@ -32,8 +32,8 @@ function RoleCard({ role }) {
       enTitle = 'Development Team'
       detail =
         '負責開發與交付產品，可為跨領域團隊，由設計師、工程師等不同專業人士組成。'
-        break
-      default : 
+      break
+    default:
   }
 
   return (

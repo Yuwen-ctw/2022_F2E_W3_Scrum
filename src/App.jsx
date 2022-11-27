@@ -6,7 +6,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/2022_F2E_W3_Scrum" element={<HomePage />} />
-          <Route path="/2022_F2E_W3_Scrum/spring" element={<SpringPage />}></Route>
+          <Route
+            path="/2022_F2E_W3_Scrum/spring"
+            element={<SpringPage />}
+          ></Route>
           <Route path="/2022_F2E_W3_Scrum/end" element={<EndPage />} />
         </Routes>
       </BrowserRouter>

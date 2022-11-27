@@ -20,9 +20,8 @@ DEMO - <a href="https://Yuwen-ctw.github.io/2022_F2E_W3_Scrum" target="_blank">S
 <pre><code>npm install</code></pre>
 4. 啟動專案
 <pre><code>npm start</code></pre>
-5. 成功後會自動開啟頁面於 http://localhost:3000
-   <br/>
-   <br/>
+
+<br/>
 
 ### 備註：請使用 1440\*1024 以上的視窗尺寸觀看，謝謝！
 
