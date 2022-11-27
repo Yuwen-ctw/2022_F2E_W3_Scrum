@@ -1,7 +1,8 @@
 function getDraggingStyle(style, isDragging) {
   const draggingStyle = isDragging
     ? {
-        scale: '0.7',
+        margin: '0 0 0 150px',
+        scale: '0.8',
         opacity: '0.75',
         outline: '3px solid #473438',
       }

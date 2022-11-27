@@ -23,15 +23,20 @@ function FlowexamSection({ onAchieve }) {
   useEffect(() => onAchieve(false), [])
 
   function validAnswer(items) {
-    // check achieve state
-    return (
-      // if all item was moved out
-      items.exam_init.length === 0 &&
-      // if priority is ascending
-      items.exam_goal.every((item, index) => {
-        return item.priority === index
-      })
-    )
+    // if any item still remains
+    if (items.exam_init.length > 0) {
+      setIsWrong(false)
+      return false
+    }
+    // check the priority is ascending by its index in the array
+    const result = items.exam_goal.every((item, index) => {
+      return item.priority === index
+    })
+    // if false, show message
+    if (!result) return setIsWrong(true)
+    // else, achieve state
+    setIsWrong(false)
+    return true
   }
 
   function handleDragEnd(e) {
@@ -47,11 +52,12 @@ function FlowexamSection({ onAchieve }) {
     // update state
     setItems(nextDrags)
 
+    // check achieve state
     const result = validAnswer(nextDrags)
     if (result) onAchieve(true)
     else onAchieve(false)
-    setIsWrong(!result)
   }
+
   return (
     <>
       <StyledContainer>

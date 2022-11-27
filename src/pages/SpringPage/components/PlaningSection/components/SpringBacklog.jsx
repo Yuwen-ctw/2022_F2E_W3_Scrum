@@ -8,13 +8,19 @@ import {
   StyledBoxContainer,
   StyledBox,
   StyledDragItem,
+  StyledSquare,
 } from './SpringBacklog.styled'
 import { whiteBox, redBox } from '../../../../../assest/images'
 
 function generateBox(score) {
   const box = Array.from({ length: score })
   return box.map((_, index) => (
-    <img src={index < 20 ? whiteBox : redBox} key={index} alt={box} />
+    <StyledSquare
+      src={index < 20 ? whiteBox : redBox}
+      key={index}
+      alt="box"
+      id={index}
+    />
   ))
 }
 

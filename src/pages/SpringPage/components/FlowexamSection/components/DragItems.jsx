@@ -1,6 +1,5 @@
 import { Droppable, Draggable } from 'react-beautiful-dnd'
 import { StyledDropContainer, StyledDragItem } from './DragItems.styled'
-import getDraggingStyle from '../../../utilities/getDraggingStyle'
 
 function DragItems({ dragItems }) {
   return (
@@ -16,15 +15,11 @@ function DragItems({ dragItems }) {
               index={index}
               key={index}
             >
-              {(provided, snapshot) => (
+              {provided => (
                 <StyledDragItem
                   {...provided.dragHandleProps}
                   {...provided.draggableProps}
                   ref={provided.innerRef}
-                  style={getDraggingStyle(
-                    provided.draggableProps.style,
-                    snapshot.isDragging
-                  )}
                 >
                   {item.name}
                   <span>{item.en_name}</span>

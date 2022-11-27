@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import DropContainerTitle from '../../shareStyle/DropContainTitle'
 import DropContainer from '../../shareStyle/DropContainer'
 import Dropbox from '../../shareStyle/Dropbox'
@@ -43,6 +43,7 @@ const StyledBoxContainer = styled.div`
   grid-template-rows: 28px 28px;
   column-gap: 8px;
   row-gap: 8px;
+  }
   &::after {
     position: absolute;
     bottom: 0px;
@@ -50,6 +51,22 @@ const StyledBoxContainer = styled.div`
     font-weight: 700;
     color: ${({ score }) => (score > 20 ? '#e8433f' : 'transparent')};
   }
+`
+const fadein = keyframes`
+  from {
+    translate: 100% 0%;
+    opacity: 0;
+  }
+  to {
+    translate: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  `
+const StyledSquare = styled.img`
+  visibility: hidden;
+  animation: ${fadein} 0.8s;
+  animation-fill-mode: forwards;
 `
 
 const StyledBox = styled.div`
@@ -63,9 +80,8 @@ const StyledBox = styled.div`
 
 const StyledDragItem = styled(DragItem)`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
+  left: -30px;
+  // translate: -50% -50%;
   display: flex;
   justify-content: center;
   gap: 24px;
@@ -83,4 +99,5 @@ export {
   StyledBoxContainer,
   StyledBox,
   StyledDragItem,
+  StyledSquare,
 }

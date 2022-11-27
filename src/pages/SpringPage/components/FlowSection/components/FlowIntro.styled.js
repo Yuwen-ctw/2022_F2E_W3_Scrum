@@ -10,7 +10,7 @@ const StyledContainer = styled.div`
 `
 
 const StyledDialog = styled(Dialog)`
-  padding: 15px 19px;
+  padding: 15px 43px 15px 19px;
   width: 100%;
   max-width: 1074px;
   p {

@@ -21,10 +21,11 @@ function FlowIntro() {
       <StyledDialog__big>
         <p>
           Sprint
-          是一個短衝，如同前面敏捷教練所提到的，一次sprint一次sprint週期為2周。開發團隊會在這期間執行開發。在這段期間內，開發團隊舉辦每日站立會議（Daily
-          Scrum） ，追蹤成員間的工作狀況。除了每日站立會議，在 Sprint
-          的結束也會包含短衝檢視會議（Sprint Review）、短衝自省會議（Sprint
-          Retrospective）。
+          是一個短衝，如同前面敏捷教練所提到的，一次sprint一次sprint週期為2周。開發團隊會在這期間執行開發。在這段期間內，開發團隊舉辦
+          <strong>每日站立會議（Daily Scrum） </strong>
+          ，追蹤成員間的工作狀況。除了每日站立會議，在 Sprint 的結束也會包含
+          <strong>短衝檢視會議（Sprint Review）</strong>、
+          <strong>短衝自省會議（Sprint Retrospective）</strong>。
         </p>
       </StyledDialog__big>
     </StyledContainer>

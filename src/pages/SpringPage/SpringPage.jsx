@@ -12,7 +12,7 @@ import { useNavigate } from 'react-router-dom'
 
 function SpringPage() {
   // record the step state
-  const [step, setStep] = useState(2)
+  const [step, setStep] = useState(1)
   // record the state of current page
   const [isComplete, setIscomplete] = useState(true)
   const navigate = useNavigate()

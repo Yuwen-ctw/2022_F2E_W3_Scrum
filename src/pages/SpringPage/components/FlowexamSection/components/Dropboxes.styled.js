@@ -13,7 +13,11 @@ const StyledDropContainer = styled(DropContainer)`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 208px 24px;
+  & :nth-child(1) {
+    grid-column: 1 / 3;
+  }
   & :nth-child(2) {
+    grid-column: 1 / 2;
     grid-row: 2 / 3;
   }
   & :nth-child(3) {
@@ -37,6 +41,7 @@ const StyledDragItem = styled(DragItem)`
   font-size: 36px;
   align-self: center;
 `
+
 export {
   StyledDropContainer,
   StyledDropboxContainer,

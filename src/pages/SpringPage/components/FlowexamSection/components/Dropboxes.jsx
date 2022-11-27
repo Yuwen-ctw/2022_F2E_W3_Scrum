@@ -5,7 +5,6 @@ import {
   StyledDropbox,
   StyledDragItem,
 } from './Dropboxes.styled'
-import getDraggingStyle from '../../../utilities/getDraggingStyle'
 
 function Dropboxes({ dragItems }) {
   return (
@@ -27,15 +26,11 @@ function Dropboxes({ dragItems }) {
                 index={index}
                 key={index}
               >
-                {(provided, snapshot) => (
+                {provided => (
                   <StyledDragItem
                     {...provided.dragHandleProps}
                     {...provided.draggableProps}
                     ref={provided.innerRef}
-                    style={getDraggingStyle(
-                      provided.draggableProps.style,
-                      snapshot.isDragging
-                    )}
                   >
                     {item.name}
                     <span>{item.en_name}</span>

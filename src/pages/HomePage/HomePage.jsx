@@ -10,8 +10,8 @@ import {
   StyledAcceptButton,
 } from './homepage.styled'
 import MessageDialog from './MessageDialog'
+import AlertScreen from './AlertScreen'
 import { homepageBtn, welcomeShark } from '../../assest/images'
-
 function HomePage() {
   function handleStartClick() {
     const windowHeight = window.innerHeight
@@ -35,6 +35,7 @@ function HomePage() {
         </StyledMessageContainer>
         <StyledWelcomeShark src={welcomeShark} alt="shark" />
       </StyledWelcomeContainer>
+      <AlertScreen />
     </>
   )
 }
