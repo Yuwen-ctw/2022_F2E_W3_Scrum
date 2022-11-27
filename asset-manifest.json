@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/2022_F2E_W3_Scrum/static/css/main.e6b8b5b5.css",
+    "main.js": "/2022_F2E_W3_Scrum/static/js/main.bbb4cef1.js",
+    "static/js/787.871ec9c6.chunk.js": "/2022_F2E_W3_Scrum/static/js/787.871ec9c6.chunk.js",
+    "static/media/GenJyuuGothic-Regular.ttf": "/2022_F2E_W3_Scrum/static/media/GenJyuuGothic-Regular.e201ca409c084f1ec671.ttf",
+    "static/media/homepageBG.png": "/2022_F2E_W3_Scrum/static/media/homepageBG.a673bf11bf892c01de60.png",
+    "static/media/homepageBG1.png": "/2022_F2E_W3_Scrum/static/media/homepageBG1.f13c30d2a59610544cb3.png",
+    "static/media/introBG.png": "/2022_F2E_W3_Scrum/static/media/introBG.3edf0f1b894fab4f657e.png",
+    "static/media/welcomeBG.png": "/2022_F2E_W3_Scrum/static/media/welcomeBG.d56c10728aa42b9dcc99.png",
+    "static/media/endpageBG.png": "/2022_F2E_W3_Scrum/static/media/endpageBG.c984bcb2a26c6f5c9444.png",
+    "static/media/flow_firebg.png": "/2022_F2E_W3_Scrum/static/media/flow_firebg.f16868c429e7a5d6386e.png",
+    "static/media/welcomeShark.png": "/2022_F2E_W3_Scrum/static/media/welcomeShark.935bf5a4e0e1af0e4d56.png",
+    "static/media/flow_bg.png": "/2022_F2E_W3_Scrum/static/media/flow_bg.2b0b2b3cee2ca9006bdf.png",
+    "static/media/planing_bg.png": "/2022_F2E_W3_Scrum/static/media/planing_bg.a4db1b769c8747292ff0.png",
+    "static/media/flowexam_bg.png": "/2022_F2E_W3_Scrum/static/media/flowexam_bg.1cba21d771d870f64ba4.png",
+    "static/media/retro_bg.png": "/2022_F2E_W3_Scrum/static/media/retro_bg.12ea1543c9215f60e631.png",
+    "static/media/todos__stonewall.png": "/2022_F2E_W3_Scrum/static/media/todos__stonewall.fc6b38acb741f12c65a6.png",
+    "static/media/developer.png": "/2022_F2E_W3_Scrum/static/media/developer.dfecbcad9bcc46a1b035.png",
+    "static/media/productOwner.png": "/2022_F2E_W3_Scrum/static/media/productOwner.cf341425abb6b2863708.png",
+    "static/media/scrumMaster.png": "/2022_F2E_W3_Scrum/static/media/scrumMaster.c894b3745d7e3a4288f4.png",
+    "index.html": "/2022_F2E_W3_Scrum/index.html",
+    "main.e6b8b5b5.css.map": "/2022_F2E_W3_Scrum/static/css/main.e6b8b5b5.css.map",
+    "main.bbb4cef1.js.map": "/2022_F2E_W3_Scrum/static/js/main.bbb4cef1.js.map",
+    "787.871ec9c6.chunk.js.map": "/2022_F2E_W3_Scrum/static/js/787.871ec9c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6b8b5b5.css",
+    "static/js/main.bbb4cef1.js"
+  ]
+}
