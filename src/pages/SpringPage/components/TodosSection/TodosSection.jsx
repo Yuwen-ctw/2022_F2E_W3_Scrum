@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, useContext, useRef } from 'react'
 import { DragDropContext } from 'react-beautiful-dnd'
 import { TaskIntro, Todos, ProductBacklog } from './components'
 import { StyledBG, StyledContainer } from './TodoSection.styled'
@@ -6,8 +6,15 @@ import { todos_bg } from '../../../../assest/images'
 import TodosContext from '../../data/TodosContext'
 
 function TodosSection({ onAchieve }) {
+  const initEffectRef = useRef(true)
   // disable the forward button first
-  useEffect(() => onAchieve(false), [])
+  useEffect(() => {
+    if (initEffectRef.current) {
+      onAchieve(false)
+    }
+    initEffectRef.current = false
+  }, [onAchieve])
+
   const todosContext = useContext(TodosContext)
   // copy data
   const [items, setItems] = useState({

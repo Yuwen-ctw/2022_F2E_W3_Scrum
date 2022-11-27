@@ -19,7 +19,7 @@ function SpringPage() {
 
   function handleForwardButtonClick() {
     if (step === 6) {
-      navigate('/end')
+      navigate('/2022_F2E_W3_Scrum/end')
     }
     setStep(step + 1)
   }

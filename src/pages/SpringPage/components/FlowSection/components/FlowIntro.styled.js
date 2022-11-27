@@ -20,7 +20,7 @@ const StyledDialog = styled(Dialog)`
     }
   }
 `
-const StyledDialog__big = styled(StyledDialog)`
+const StyledDialogBig = styled(StyledDialog)`
   position: relative;
   grid-column: 2 / 3;
 `
@@ -42,7 +42,7 @@ const StyledRoleName = styled.p`
 export {
   StyledContainer,
   StyledDialog,
-  StyledDialog__big,
+  StyledDialogBig,
   StyledAvatar,
   StyledRoleName,
 }

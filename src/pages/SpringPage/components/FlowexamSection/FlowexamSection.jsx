@@ -1,5 +1,5 @@
 import { DragDropContext } from 'react-beautiful-dnd'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { DragItems, Dropboxes, ExamHint, ExamIntro } from './components'
 import { flowexam_bg, flowexam_mainArrowBg } from '../../../../assest/images'
 import {
@@ -19,8 +19,14 @@ function FlowexamSection({ onAchieve }) {
     ],
     exam_goal: [],
   })
+  const initEffectRef = useRef(true)
   // disable the forward button first
-  useEffect(() => onAchieve(false), [])
+  useEffect(() => {
+    if (initEffectRef.current) {
+      onAchieve(false)
+    }
+    initEffectRef.current = false
+  }, [onAchieve])
 
   function validAnswer(items) {
     // if any item still remains

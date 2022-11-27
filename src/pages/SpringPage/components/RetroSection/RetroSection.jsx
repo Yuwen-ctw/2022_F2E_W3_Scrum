@@ -1,13 +1,18 @@
 import { StyledContainer, StyledBG } from './RetroSection.styled'
 import { RetroIntro, RetroTest } from './components'
 import { retro_bg } from '../../../../assest/images'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 
 function RetroSection({ onAchieve }) {
   const [isCorrect, setIsCorrect] = useState(true)
-
+  const initEffectRef = useRef(true)
   // disable the forward button first
-  useEffect(() => onAchieve(false), [])
+  useEffect(() => {
+    if (initEffectRef.current) {
+      onAchieve(false)
+    }
+    initEffectRef.current = false
+  }, [onAchieve])
 
   function handleChangeInput(boolean) {
     setIsCorrect(boolean)

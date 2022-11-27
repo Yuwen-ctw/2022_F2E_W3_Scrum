@@ -1,7 +1,7 @@
 import { StyledContainer, StyledBG } from './PlaningSection.styled'
 import { PlaningModal, ProductBacklog, SpringBacklog } from './components'
 import { planing_bg } from '../../../../assest/images'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, useContext, useRef } from 'react'
 import { DragDropContext } from 'react-beautiful-dnd'
 import TodosContext from '../../data/TodosContext'
 
@@ -12,8 +12,14 @@ function PlaningSection({ onAchieve }) {
     springBacklog: [],
   })
   const [score, setScore] = useState(0)
+  const initEffectRef = useRef(true)
   // disable the forward button first
-  useEffect(() => onAchieve(false), [])
+  useEffect(() => {
+    if (initEffectRef.current) {
+      onAchieve(false)
+    }
+    initEffectRef.current = false
+  }, [onAchieve])
 
   function handleDragEnd(e) {
     // get information

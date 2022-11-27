@@ -25,9 +25,9 @@ function PlaningModal() {
     <>
       <ModalBackground className={className}>
         <StyledModalContainer>
-          <DialogContainer_PO />
-          <DialogContainer_SM />
-          <DialogContainer_DT />
+          <DialogContainerPO />
+          <DialogContainerSM />
+          <DialogContainerDT />
           <StyledModalButton onClick={handleClick}>沒問題！</StyledModalButton>
         </StyledModalContainer>
       </ModalBackground>
@@ -37,7 +37,7 @@ function PlaningModal() {
 
 export default PlaningModal
 
-function DialogContainer_PO() {
+function DialogContainerPO() {
   return (
     <StyledDialogContainer>
       <StyledAvatar src={productOwnerAvatar} alt="avatar" />
@@ -55,7 +55,7 @@ function DialogContainer_PO() {
   )
 }
 
-function DialogContainer_SM() {
+function DialogContainerSM() {
   return (
     <StyledDialogContainer>
       <StyledAvatar src={scrumMasterAvatar} alt="avatar" />
@@ -74,7 +74,7 @@ function DialogContainer_SM() {
   )
 }
 
-function DialogContainer_DT() {
+function DialogContainerDT() {
   return (
     <StyledDialogContainer>
       <StyledAvatar src={developerAvatar} alt="avatar" />

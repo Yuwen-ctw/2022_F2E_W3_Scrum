@@ -29,7 +29,7 @@ function HomePage() {
       <StyledWelcomeContainer>
         <StyledMessageContainer>
           <MessageDialog />
-          <Link to="/spring">
+          <Link to="/2022_F2E_W3_Scrum/spring">
             <StyledAcceptButton>接受挑戰</StyledAcceptButton>
           </Link>
         </StyledMessageContainer>
