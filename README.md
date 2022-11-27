@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# 2022 F2E W3 - Scrum 新手村
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src='./public/screen.jpg'>
 
-## Available Scripts
+UI 設計 - <a href="https://2022.thef2e.com/users/12061549261446563754" target="_blank">邱仲德</a>
 
-In the project directory, you can run:
+設計稿 - <a href="https://www.figma.com/file/kbtC7fpZWSjEAzeJmnsVO2/Scrum-%E6%96%B0%E6%89%8B%E6%9D%91?node-id=0%3A1" target="_blank">Figma</a>
 
-### `npm start`
+DEMO - <a  target="_blank">Scrum 新手村</a>
+<br>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 使用方式
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. 打開終端機，Clone 專案至本機
+<pre><code>git clone https://github.com/Yuwen-ctw/2022_F2E_W3_Scrum.git</code></pre>
+2. 進入專案資料夾
+<pre><code>cd 2022_F2E_W3_Scrum</code></pre>
+3. 安裝 npm 套件
+<pre><code>npm install</code></pre>
+4. 啟動專案
+<pre><code>npm start</code></pre>
+5. 成功後會自動開啟頁面於 http://localhost:3000
+   <br/>
+   <br/>
 
-### `npm test`
+### 備註：請使用 1440\*1024 以上的視窗尺寸觀看，謝謝！
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br/>
+<br/>
 
-### `npm run build`
+## 資料夾說明
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+src\
+　| _ assest\
+　　　| _ fonts - 字型 \
+　　　| _ images - 圖片 \
+　| _ pages\
+　　　| _ HomePage - 首頁元件\
+　　　| _ SpringPage 內容元件\
+　　　　　| _ components - 子元件\
+　　　　　| _ data - 文字資料\
+　　　　　| _ utilities - 功能\
+　　　| _ EndPage - 尾頁元件
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 開發工具
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- creat-react-app - 框架
+- styled-components - 樣式
+- react-beautiful-dnd - 元件拖曳功能
+- react-router-dom - 路由
+  <br/>
+  <br/>
+  <br/>
 
-### `npm run eject`
+### 優化空間：
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. 拖曳功能還做得不夠順暢，例如無法拖曳到前後沒有相鄰元件的索引位置上。
+2. 拖曳時若變更尺寸，則被拖曳元件與游標之間會有落差。
+3. 程式碼重構，將設計稿文字內容獨立出來及整理共用樣式等。
