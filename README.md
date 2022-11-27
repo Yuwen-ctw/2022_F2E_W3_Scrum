@@ -6,7 +6,7 @@ UI 設計 - <a href="https://2022.thef2e.com/users/12061549261446563754" target=
 
 設計稿 - <a href="https://www.figma.com/file/kbtC7fpZWSjEAzeJmnsVO2/Scrum-%E6%96%B0%E6%89%8B%E6%9D%91?node-id=0%3A1" target="_blank">Figma</a>
 
-DEMO - <a  target="_blank">Scrum 新手村</a>
+DEMO - <a href="https://Yuwen-ctw.github.io/2022_F2E_W3_Scrum" target="_blank">Scrum 新手村</a>
 <br>
 <br>
 
