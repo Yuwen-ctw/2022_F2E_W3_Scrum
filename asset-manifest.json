@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/2022_F2E_W3_Scrum/static/css/main.e6b8b5b5.css",
-    "main.js": "/2022_F2E_W3_Scrum/static/js/main.bbb4cef1.js",
+    "main.js": "/2022_F2E_W3_Scrum/static/js/main.a06fb1f2.js",
     "static/js/787.871ec9c6.chunk.js": "/2022_F2E_W3_Scrum/static/js/787.871ec9c6.chunk.js",
     "static/media/GenJyuuGothic-Regular.ttf": "/2022_F2E_W3_Scrum/static/media/GenJyuuGothic-Regular.e201ca409c084f1ec671.ttf",
     "static/media/homepageBG.png": "/2022_F2E_W3_Scrum/static/media/homepageBG.a673bf11bf892c01de60.png",
@@ -21,11 +21,11 @@
     "static/media/scrumMaster.png": "/2022_F2E_W3_Scrum/static/media/scrumMaster.c894b3745d7e3a4288f4.png",
     "index.html": "/2022_F2E_W3_Scrum/index.html",
     "main.e6b8b5b5.css.map": "/2022_F2E_W3_Scrum/static/css/main.e6b8b5b5.css.map",
-    "main.bbb4cef1.js.map": "/2022_F2E_W3_Scrum/static/js/main.bbb4cef1.js.map",
+    "main.a06fb1f2.js.map": "/2022_F2E_W3_Scrum/static/js/main.a06fb1f2.js.map",
     "787.871ec9c6.chunk.js.map": "/2022_F2E_W3_Scrum/static/js/787.871ec9c6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6b8b5b5.css",
-    "static/js/main.bbb4cef1.js"
+    "static/js/main.a06fb1f2.js"
   ]
 }
